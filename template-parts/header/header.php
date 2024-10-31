@@ -17,3 +17,14 @@
 <body <?php body_class(); ?>>
   <main class="site-main">
     <div class="site">
+      <div class="wrapper">
+        <div class="row">
+          <div>
+            <?php if( function_exists( 'the_custom_logo' ) ){
+              the_custom_logo();
+            }else{  ?>
+              <a href="<?php esc_attr_e( esc_url( home_url( '/' ) ) )?>"><?php bloginfo( 'name' ); ?></a>
+            <?php } ?>
+          </div>
+        </div>
+      </div>
