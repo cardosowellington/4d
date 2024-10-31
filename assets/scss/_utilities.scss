@@ -1,0 +1,234 @@
+@use 'sass:math';
+
+$utilities:(
+  
+
+  // margin
+  "margin":(
+    "prefix": "m",
+    "values": (
+      "auto": 0 auto,
+      "0": 0,
+      "8": $s-8,
+      "16": $s-16,
+      "24": $s-24,
+      "32": $s-32,
+      "40": $s-40,
+      "48": $s-48,
+      "56": $s-56,
+      "64": $s-64,
+      "80": $s-80,
+      "120": $s-120,  
+    ),
+  ),
+  "margin-right":(
+    "prefix": "mr",
+    "values": (
+      "0": 0,
+      "8": $s-8,
+      "16": $s-16,
+      "24": $s-24,
+      "32": $s-32,
+      "40": $s-40,
+      "48": $s-48,
+      "56": $s-56,
+      "64": $s-64,
+      "80": $s-80,
+      "120": $s-120,  
+    ),
+  ),
+  "margin-bottom":(
+    "prefix": "mb",
+    "values": (
+      "0": 0,
+      "8": $s-8,
+      "16": $s-16,
+      "24": $s-24,
+      "32": $s-32,
+      "40": $s-40,
+      "48": $s-48,
+      "56": $s-56,
+      "64": $s-64,
+      "80": $s-80,
+      "120": $s-120,  
+    ),
+  ),
+  "margin-left":(
+    "prefix": "ml",
+    "values": (
+      "0": 0,
+      "8": $s-8,
+      "16": $s-16,
+      "24": $s-24,
+      "32": $s-32,
+      "40": $s-40,
+      "48": $s-48,
+      "56": $s-56,
+      "64": $s-64,
+      "80": $s-80,
+      "120": $s-120,  
+    ),
+  ),
+  "margin-top":(
+    "prefix": "mt",
+    "values": (
+      "0": 0,
+      "8": $s-8,
+      "16": $s-16,
+      "24": $s-24,
+      "32": $s-32,
+      "40": $s-40,
+      "48": $s-48,
+      "56": $s-56,
+      "64": $s-64,
+      "80": $s-80,
+      "120": $s-120,  
+    ),
+  ),
+
+  //text 
+  "text-align":(
+    "prefix": "text",
+    "values": (
+      "center" : center,
+      "right" : right,
+      "left": left,
+    ),
+  ),
+
+  // display
+  "display" : (
+    "prefix" : "display",
+    "values" : (
+      "none" : none,
+      "block" : block,
+      "flex" : flex,
+      "grid" : grid,
+      "inline" : inline,
+      "inline-block" : inline-block,
+    ),
+  ),
+
+  // align item
+  "align-items" : (
+    "prefix": "align-items",
+    "values": (
+      "normal" : normal,
+      "center" : center,
+      "end" : end,
+      "start" :  start,
+      "reverse" : reverse,
+      "flex-end" : flex-end,
+      "flex-start" : flex-start,
+      "initial" : initial,
+    ),
+  ),
+
+  // justify content
+  "justify-content" : (
+    "prefix" : "justify",
+    "values" : (
+      "center" : center,
+      "between" : space-between,
+      "around" : space-around,
+      "end" : end,
+      "start" : start,
+      "reverse" : reverse,
+      "flex-end" : flex-end,
+      "flex-start" : flex-start,
+      "initial" : initial,
+    ),
+  ),
+
+  // font size
+  "font-size" :( 
+    "prefix": "font",
+    "values":(
+      "40": $f-40,
+      "31": $f-31,
+      "24": $f-24,
+      "19": $f-19,
+      "15": $f-15,
+      "12": $f-12,
+      "9": $f-9,
+      "5": $f-5, 
+    ),
+   ),
+
+  // font family
+  // "font-family":(
+  //   "prefix": "family",
+  //   "values":(
+  //     // "light": $f-light,
+  //     // "regular": $f-regular,
+  //     // "medium": $f-medium,
+  //     // "semiBold": $f-semiBold,
+  //     // "bold": $f-bold,
+  //     // "extraBold": $f-extraBold,
+  //     // "black": $f-black,
+  //   ),
+  // ),
+  
+  // font weight
+  "font-weight" :(
+    "prefix": "weight",
+    "values":(
+      "900": 900,
+      "800": 800,
+      "700": 700,
+      "600": 600,
+      "500": 500,
+      "400": 400,
+      "300": 300,
+      "200": 200,
+      "100": 100,
+    ),
+  ),
+
+  // text
+  "text-transform":(
+    "prefix": "text",
+    "values":(
+      "none": none,
+      "capitalize": capitalize,
+      "uppercase": uppercase,
+      "lowercase": lowercase,
+    ),
+  ),
+
+
+   // opacity
+   "opacity" : (
+    "prefix" : "opacity",
+    "values" : (
+      "10" : .1,
+      "20" : .2,
+      "30" : .3,
+      "40" : .4,
+      "50" : .5,
+      "60" : .6,
+      "70" : .7,
+      "80" : .8,
+      "90" : .9,
+      "100" : 1,
+    ),
+  ),
+);
+
+// generate utility classes
+@each $property, $map in $utilities{
+  $prefix : map-get( $map, "prefix" );
+  $values : map-get( $map, "values" );
+
+  @each $k, $v in $values{
+    @if( $k == "default" ){
+      .#{$prefix}{
+        #{$property}: $v;
+      }
+    }@else{
+      .#{$prefix}-#{$k}{
+        #{$property}: $v;
+      }
+    }
+  } 
+}

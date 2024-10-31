@@ -12,3 +12,7 @@ npm install css-loader mini-css-extract-plugin sass sass-loader
 Inside the package.json file add "dev": "webpack", inside the scripts
 
 To activate we use the "npm run dev" command
+
+### add normalize
+npm install --save normalize.css
+

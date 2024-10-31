@@ -1,0 +1,8 @@
+@each $key, $val in $colors{
+  .color-#{$key}{
+    color: $val;
+  }
+  .background-#{$key}{
+    background: $val;
+  }
+}

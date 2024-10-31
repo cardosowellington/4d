@@ -1,0 +1,47 @@
+// font theme
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+$f-nunito:  "Nunito Sans", sans-serif; 
+
+// theme colors
+$yellow1: #ffde31;
+$yellow2: #ffb800;
+$grey1: #f7f7f7;
+$grey2: #dddddd;
+$grey3: #888888;
+$grey4: #494949;
+$hover: #ffd361;
+
+// colors
+$colors:(
+  'yellow-1': $yellow1,
+  'yellow-2': $yellow2,
+  'grey-1': $grey1,
+  'grey-2': $grey2,
+  'grey-3': $grey3,
+  'grey-4': $grey4,
+  'white': #FFF,
+  'hover': $hover,
+);
+
+// font size
+$f-40: 2.5rem;
+$f-31: 1.9375rem;
+$f-24: 1.5rem;
+$f-19: 1.1875rem;
+$f-15: .9375rem;
+$f-12: .75rem;
+$f-9: .5625rem;
+$f-5: .3125rem;
+
+// spacing
+$s-8: .5rem;
+$s-16: 1rem;
+$s-24: 1.5rem;
+$s-32: 2rem;
+$s-40: 2.5rem;
+$s-48: 3rem;
+$s-56: 3.5rem;
+$s-64: 4rem;
+$s-80: 5rem;
+$s-120: 7.5rem;
