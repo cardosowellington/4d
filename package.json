@@ -16,7 +16,15 @@
     "normalize.css": "^8.0.1",
     "sass": "^1.77.8",
     "sass-loader": "^16.0.1",
-    "webpack": "^5.94.0",
+    "webpack": "^5.97.1",
     "webpack-cli": "^5.1.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cardosowellington/4d.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cardosowellington/4d/issues"
+  },
+  "homepage": "https://github.com/cardosowellington/4d#readme"
 }
